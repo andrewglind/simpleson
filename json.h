@@ -103,7 +103,7 @@ namespace json
 		/*! \brief Length field exposed */
 		using std::string::length;
 
-		#if __GNUC__ && __GNUC__ < 11
+		#if __cplusplus < 201103L || (__GNUC__ && __GNUC__ < 11)
 		inline char front() const { return this->at(0); }
 		inline char back() const { return this->at(this->length() - 1); }
 		#else
