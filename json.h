@@ -881,7 +881,7 @@ namespace json
 			 */
 			const_proxy(const jobject &source, const std::string key) : source(source), key(key) 
 			{ 
-				if(source.array_flag) throw std::logic_error("Source cannot be an array");
+				if(source.is_array()) throw std::logic_error("Source cannot be an array");
 			}
 
 			/*! \brief Returns another constant value from this array
