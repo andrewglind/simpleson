@@ -601,7 +601,7 @@ namespace json
 			this->data.erase(this->data.begin() + index);
 		}
 
-		/*! \brief Returns the key/value pairs of a JSONObject as a map<string, string>
+		/*! \brief Returns key/value pairs as a map<string, string>
 		 */
 		inline std::map<std::string, std::string> to_map() const
 		{
